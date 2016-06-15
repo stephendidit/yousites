@@ -9,12 +9,91 @@
 
 <body>
 	<div class="email" id="wrapper">
-		<div id="home"></div>
-		<div class="link" id="email-link">
-		</div>
+
+
+		<!-- SCREENS -->
+		<div id="home" class="screen"></div>
+		<div id="bio" class="screen"></div>
+		<div id="news" class="screen"></div>
+		<div id="shows" class="screen"></div>
+		<div id="music" class="screen"></div>
+		<div id="videos" class="screen"></div>
+		<div id="store" class="screen"></div>
+		<div id="contact" class="screen"></div>
+		<div id="free" class="screen"></div>
+
+
+		<!-- MAIN MENU LINKS -->
+		<div id="link-bio" class="link"></div>
+		<div id="link-news" class="link"></div>
+		<div id="link-shows" class="link"></div>
+		<div id="link-music" class="link"></div>
+		<div id="link-photos" class="link"></div>
+		<div id="link-videos" class="link"></div>
+		<div id="link-store" class="link"></div>
+		<div id="link-contact" class="link"></div>
+		<div id="link-free" class="link"></div>
+
+		<div id="a"></div>
 
 	</div>
 	<p>Next steps: rename all images to remove spaces. Include bootstrap for easy centering/resizing. May be an issue if not absolute positioning...so, maybe not! Test by putting some colored divs over image and resizing first.</p>
     <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+    <script>
+    	$('#link-bio').click(function(){
+    		$('.screen').fadeOut('fast',function(){
+    			$('#bio').fadeIn('slow');
+    		});
+
+    	});
+    	$('#link-news').click(function(){
+    		$('.screen').fadeOut('fast',function(){
+    			$('#news').fadeIn('slow');
+    		});
+
+    	});
+    	$('#link-shows').click(function(){
+    		$('.screen').fadeOut('fast',function(){
+    			$('#shows').fadeIn('slow');
+    		});
+
+    	});
+    	$('#link-music').click(function(){
+    		$('.screen').fadeOut('fast',function(){
+    			$('#music').fadeIn('slow');
+    		});
+
+    	});
+    	$('#link-photos').click(function(){
+    		$('.screen').fadeOut('fast',function(){
+    			$('#photos').fadeIn('slow');
+    		});
+
+    	});
+    	$('#link-videos').click(function(){
+    		$('.screen').fadeOut('fast',function(){
+    			$('#videos').fadeIn('slow');
+    		});
+
+    	});
+    	$('#link-store').click(function(){
+    		$('.screen').fadeOut('fast',function(){
+    			$('#store').fadeIn('slow');
+    		});
+
+    	});
+    	$('#link-contact').click(function(){
+    		$('.screen').fadeOut('fast',function(){
+    			$('#contact').fadeIn('slow');
+    		});
+
+    	});
+    	$('#link-free').click(function(){
+    		$('.screen').fadeOut('fast',function(){
+    			$('#free').fadeIn('slow');
+    		});
+
+    	});
+    </script>
 </body>
 </html>
