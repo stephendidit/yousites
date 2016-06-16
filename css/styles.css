@@ -21,6 +21,56 @@
   display: none;
 }
 
+#news {
+  background:url(../images/03-news.jpg) no-repeat;
+  height:100%;
+  width:100%;
+  display: none;
+}
+
+#shows {
+  background:url(../images/04-shows.jpg) no-repeat;
+  height:100%;
+  width:100%;
+  display: none;
+}
+
+#music {
+  background:url(../images/05-music.jpg) no-repeat;
+  height:100%;
+  width:100%;
+  display: none;
+}
+
+#photos {
+  background:url(../images/06a-photos-or-videos.jpg) no-repeat;
+  height:100%;
+  width:100%;
+  display: none;
+}
+#store {
+  background:url(../images/07-store.jpg) no-repeat;
+  height:100%;
+  width:100%;
+  display: none;
+}
+#contact {
+  background:url(../images/08a-contact.jpg) no-repeat;
+  height:100%;
+  width:100%;
+  display: none;
+}
+#logo {
+  background:url(../images/09-logged-in.jpg) no-repeat;
+  height:100%;
+  width:100%;
+  display: none;
+}
+
+
+
+
+
 
 .link {
   opacity: .5;
@@ -58,16 +108,9 @@
 
 #link-photos {
   height: 26px;
-  width: 70px;
-  top: 500px;
-  left: 80px;
-}
-
-#link-videos {
-  height: 26px;
   width: 219px;
   top: 500px;
-  left: 160px;
+  left: 80px;
 }
 
 #link-store {

@@ -17,22 +17,21 @@
 		<div id="news" class="screen"></div>
 		<div id="shows" class="screen"></div>
 		<div id="music" class="screen"></div>
-		<div id="videos" class="screen"></div>
+		<div id="photos" class="screen"></div>
 		<div id="store" class="screen"></div>
 		<div id="contact" class="screen"></div>
 		<div id="free" class="screen"></div>
 
 
 		<!-- MAIN MENU LINKS -->
-		<div id="link-bio" class="link"></div>
-		<div id="link-news" class="link"></div>
-		<div id="link-shows" class="link"></div>
-		<div id="link-music" class="link"></div>
-		<div id="link-photos" class="link"></div>
-		<div id="link-videos" class="link"></div>
-		<div id="link-store" class="link"></div>
-		<div id="link-contact" class="link"></div>
-		<div id="link-free" class="link"></div>
+		<a href="#"><span id="link-bio" class="link"></span></a>
+		<a href="#"><span id="link-news" class="link"></span></a>
+		<a href="#"><span id="link-shows" class="link"></span></a>
+		<a href="#"><span id="link-music" class="link"></span></a>
+		<a href="#"><span id="link-photos" class="link"></span></a>
+		<a href="#"><span id="link-store" class="link"></span></a>
+		<a href="#"><span id="link-contact" class="link"></span></a>
+		<a href="#"><span id="link-free" class="link"></span></a>
 
 		<div id="a"></div>
 
@@ -42,19 +41,19 @@
     <script>
     	$('#link-bio').click(function(){
     		$('.screen').fadeOut('fast',function(){
-    			$('#bio').fadeIn('slow');
+    			$('#bio').fadeIn(300);
     		});
 
     	});
     	$('#link-news').click(function(){
-    		$('.screen').fadeOut('fast',function(){
-    			$('#news').fadeIn('slow');
+    		$('.screen').fadeOut(1,function(){
+    			$('#news').fadeIn(1);
     		});
 
     	});
     	$('#link-shows').click(function(){
-    		$('.screen').fadeOut('fast',function(){
-    			$('#shows').fadeIn('slow');
+    		$('.screen').fadeOut(1,function(){
+    			$('#shows').fadeIn(1);
     		});
 
     	});
@@ -70,12 +69,6 @@
     		});
 
     	});
-    	$('#link-videos').click(function(){
-    		$('.screen').fadeOut('fast',function(){
-    			$('#videos').fadeIn('slow');
-    		});
-
-    	});
     	$('#link-store').click(function(){
     		$('.screen').fadeOut('fast',function(){
     			$('#store').fadeIn('slow');
@@ -88,12 +81,14 @@
     		});
 
     	});
-    	$('#link-free').click(function(){
+    	$('#link-login').click(function(){
     		$('.screen').fadeOut('fast',function(){
-    			$('#free').fadeIn('slow');
+    			$('#logged-in').fadeIn('slow');
     		});
 
     	});
+
+    	// all links should pulsate.
     </script>
 </body>
 </html>
