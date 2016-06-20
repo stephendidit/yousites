@@ -20,7 +20,9 @@
 		<div id="photos" class="screen">
             <a href="#"><span id="link-lightbox" class="link"></span></a>
         </div>
-        <div id="lightbox" class="screen"></div>
+        <div id="lightbox" class="screen">
+            <a href="#"><span id="link-lightbox-close" class="link"></span></a>
+        </div>
 		<div id="store" class="screen"></div>
 		<div id="contact" class="screen">
             <a href="#"><span id="link-send" class="link"></span></a>
@@ -76,7 +78,7 @@
     		});
 
     	});
-    	$('#link-photos').click(function(){
+    	$('#link-photos, #link-lightbox-close').click(function(){
     		$('.screen').fadeOut(1,function(){
     			$('#photos').fadeIn(1);
     		});
