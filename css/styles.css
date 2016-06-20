@@ -48,6 +48,14 @@
   width:100%;
   display: none;
 }
+#lightbox {
+  background:url(../images/06b-lightbox.jpg) no-repeat;
+  height:100%;
+  width:100%;
+  display: none;
+}
+
+
 #store {
   background:url(../images/07-store.jpg) no-repeat;
   height:100%;
@@ -60,15 +68,18 @@
   width:100%;
   display: none;
 }
+#contact-send {
+  background:url(../images/08b-contact-send.jpg) no-repeat;
+  height:100%;
+  width:100%;
+  display: none;
+}
 #logo {
   background:url(../images/09-logged-in.jpg) no-repeat;
   height:100%;
   width:100%;
   display: none;
 }
-
-
-
 
 
 
@@ -126,6 +137,20 @@
   top: 550px;
   left: 80px;
 }
+
+#link-send {
+  height: 40px;
+  width: 111px;
+  top: 635px;
+  left: 812px;
+}
+#link-lightbox {
+  height: 300px;
+  width: 220px;
+  top: 130px;
+  left: 770px;
+}
+
 
 
 

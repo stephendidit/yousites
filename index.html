@@ -8,7 +8,7 @@
 </head>
 
 <body>
-	<div class="email" id="wrapper">
+	<div id="wrapper">
 
 
 		<!-- SCREENS -->
@@ -17,10 +17,18 @@
 		<div id="news" class="screen"></div>
 		<div id="shows" class="screen"></div>
 		<div id="music" class="screen"></div>
-		<div id="photos" class="screen"></div>
+		<div id="photos" class="screen">
+            <a href="#"><span id="link-lightbox" class="link"></span></a>
+        </div>
+        <div id="lightbox" class="screen"></div>
 		<div id="store" class="screen"></div>
-		<div id="contact" class="screen"></div>
-		<div id="free" class="screen"></div>
+		<div id="contact" class="screen">
+            <a href="#"><span id="link-send" class="link"></span></a>
+        </div>
+		<div id="contact-send" class="screen"></div>
+        <div id="free" class="screen"></div>
+        <div id="contact-send" class="screen"></div>
+
 
 
 		<!-- MAIN MENU LINKS -->
@@ -29,6 +37,7 @@
 		<a href="#"><span id="link-shows" class="link"></span></a>
 		<a href="#"><span id="link-music" class="link"></span></a>
 		<a href="#"><span id="link-photos" class="link"></span></a>
+        <a href="#"><span id="lightbox" class="link"></span></a>
 		<a href="#"><span id="link-store" class="link"></span></a>
 		<a href="#"><span id="link-contact" class="link"></span></a>
 		<a href="#"><span id="link-free" class="link"></span></a>
@@ -36,12 +45,16 @@
 		<div id="a"></div>
 
 	</div>
-	<p>Next steps: rename all images to remove spaces. Include bootstrap for easy centering/resizing. May be an issue if not absolute positioning...so, maybe not! Test by putting some colored divs over image and resizing first.</p>
     <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+    <script src="js/pulsate.min.js"></script>
     <script>
+
+        // $('.link').pulsate({
+        //     pause:1000
+        // });
     	$('#link-bio').click(function(){
-    		$('.screen').fadeOut('fast',function(){
-    			$('#bio').fadeIn(300);
+    		$('.screen').fadeOut(1,function(){
+    			$('#bio').fadeIn(1);
     		});
 
     	});
@@ -58,35 +71,50 @@
 
     	});
     	$('#link-music').click(function(){
-    		$('.screen').fadeOut('fast',function(){
-    			$('#music').fadeIn('slow');
+    		$('.screen').fadeOut(1,function(){
+    			$('#music').fadeIn(1);
     		});
 
     	});
     	$('#link-photos').click(function(){
-    		$('.screen').fadeOut('fast',function(){
-    			$('#photos').fadeIn('slow');
+    		$('.screen').fadeOut(1,function(){
+    			$('#photos').fadeIn(1);
     		});
-
     	});
+        $('#link-lightbox').click(function(){
+            $('.screen').fadeOut(1,function(){
+                $('#lightbox').fadeIn(1);
+            });
+        });
     	$('#link-store').click(function(){
-    		$('.screen').fadeOut('fast',function(){
-    			$('#store').fadeIn('slow');
+    		$('.screen').fadeOut(1,function(){
+    			$('#store').fadeIn(1);
     		});
 
     	});
     	$('#link-contact').click(function(){
-    		$('.screen').fadeOut('fast',function(){
-    			$('#contact').fadeIn('slow');
+    		$('.screen').fadeOut(1,function(){
+    			$('#contact').fadeIn(1);
     		});
 
     	});
     	$('#link-login').click(function(){
-    		$('.screen').fadeOut('fast',function(){
-    			$('#logged-in').fadeIn('slow');
+    		$('.screen').fadeOut(1,function(){
+    			$('#logged-in').fadeIn(1);
     		});
-
     	});
+        $('#link-send').click(function(){
+            $('.screen').fadeOut(1,function(){
+                $('#contact-send').fadeIn(1);
+            });
+        });
+        $('#link-lightbox').click(function(){
+            $('.screen').fadeOut(1,function(){
+                $('#lightbox').fadeIn(1);
+            });
+        });
+
+
 
     	// all links should pulsate.
     </script>
