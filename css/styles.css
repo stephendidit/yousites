@@ -8,6 +8,12 @@
   margin-top:1rem
 }
 
+#login-toggle{
+      position: absolute;
+    left: 1000px;
+    top: 100px;
+}
+
 #home {
   background:url(../images/00-homepage.jpg) no-repeat;
   height:100%;
@@ -74,7 +80,7 @@
   width:100%;
   display: none;
 }
-#logo {
+#logged-in {
   background:url(../images/09-logged-in.jpg) no-repeat;
   height:100%;
   width:100%;
@@ -154,6 +160,13 @@
   height: 100%;
   width: 100%;
 }
+#link-login {
+  height: 45px;
+  width: 60px;
+  top: 965px;
+  left: 40px;
+}
+
 
 
 
