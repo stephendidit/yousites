@@ -16,14 +16,14 @@
 		<div id="shows" class="screen"></div>
 		<div id="music" class="screen"></div>
 		<div id="photos" class="screen">
-            <a href="#"><span id="link-lightbox" class="link"></span></a>
+            <a href="#"><span id="link-lightbox" class="user link"></span></a>
         </div>
         <div id="lightbox" class="screen">
-            <a href="#"><span id="link-lightbox-close" class="link"></span></a>
+            <a href="#"><span id="link-lightbox-close" class="user link"></span></a>
         </div>
 		<div id="store" class="screen"></div>
 		<div id="contact" class="screen">
-            <a href="#"><span id="link-send" class="link"></span></a>
+            <a href="#"><span id="link-send" class="user link"></span></a>
         </div>
 		<div id="contact-send" class="screen"></div>
         <div id="free" class="screen"></div>
@@ -34,85 +34,116 @@
 
 
 		<!-- MAIN MENU LINKS -->
-		<a href="#"><span id="link-bio" class="link"></span></a>
-		<a href="#"><span id="link-news" class="link"></span></a>
-		<a href="#"><span id="link-shows" class="link"></span></a>
-		<a href="#"><span id="link-music" class="link"></span></a>
-		<a href="#"><span id="link-photos" class="link"></span></a>
-        <a href="#"><span id="lightbox" class="link"></span></a>
-		<a href="#"><span id="link-store" class="link"></span></a>
-		<a href="#"><span id="link-contact" class="link"></span></a>
-		<a href="#"><span id="link-free" class="link"></span></a>
+		<a href="#"><span id="link-bio" class="link user"></span></a>
+		<a href="#"><span id="link-news" class="link user"></span></a>
+		<a href="#"><span id="link-shows" class="link user"></span></a>
+		<a href="#"><span id="link-music" class="link user"></span></a>
+		<a href="#"><span id="link-photos" class="link user"></span></a>
+        <a href="#"><span id="lightbox" class="link user"></span></a>
+		<a href="#"><span id="link-store" class="link user"></span></a>
+		<a href="#"><span id="link-contact" class="link user"></span></a>
+		<a href="#"><span id="link-free" class="link user"></span></a>
 
-		<a href="#"><span id="link-login" class="link"></span></a>
+		<a href="#"><span id="link-login" class="link user"></span></a>
 
 	</div>
     <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
     <script src="js/pulsate.min.js"></script>
     <script>
 
-        // $('.link').pulsate({
-        //     pause:1000
-        // });
+        var user = "user";
+
+        function changePulsate(){
+            if (user == "user") {
+                $('.admin').pulsate('destroy');
+                $('.user').pulsate({
+                     pause:1000
+                });
+
+            } else if (user == "admin") {
+                $('.user').pulsate('destroy');
+                $('.admin').pulsate({
+                     pause:1000
+                });
+            }
+        }
+
+        changePulsate();
+
+
+
     	$('#link-bio').click(function(){
     		$('.screen').fadeOut(1,function(){
     			$('#bio').fadeIn(1);
+                user = "user";
+                changePulsate();
     		});
 
     	});
     	$('#link-news').click(function(){
     		$('.screen').fadeOut(1,function(){
     			$('#news').fadeIn(1);
+                user = "user";
     		});
 
     	});
     	$('#link-shows').click(function(){
     		$('.screen').fadeOut(1,function(){
     			$('#shows').fadeIn(1);
+                user = "user";
     		});
 
     	});
     	$('#link-music').click(function(){
     		$('.screen').fadeOut(1,function(){
     			$('#music').fadeIn(1);
+                user = "user";
     		});
 
     	});
     	$('#link-photos, #link-lightbox-close').click(function(){
     		$('.screen').fadeOut(1,function(){
     			$('#photos').fadeIn(1);
+                user = "user";
     		});
     	});
         $('#link-lightbox').click(function(){
             $('.screen').fadeOut(1,function(){
                 $('#lightbox').fadeIn(1);
+                user = "user";
             });
         });
     	$('#link-store').click(function(){
     		$('.screen').fadeOut(1,function(){
     			$('#store').fadeIn(1);
+                user = "user";
     		});
 
     	});
     	$('#link-contact').click(function(){
     		$('.screen').fadeOut(1,function(){
     			$('#contact').fadeIn(1);
+                user = "user";
     		});
 
     	});
     	$('#link-login').click(function(){
     		$('.screen').fadeOut(1,function(){
     			$('#logged-in').fadeIn(1);
+                user = "admin";
+                changePulsate();
     		});
     	});
         $('#link-send').click(function(){
             $('.screen').fadeOut(1,function(){
                 $('#contact-send').fadeIn(1);
+                user = "user";
             });
         });
         $('#link-lightbox').click(function(){
             $('.screen').fadeOut(1,function(){
                 $('#lightbox').fadeIn(1);
+                user = "user";
             });
         });
 
