@@ -46,21 +46,30 @@
 
 		<a href="#"><span id="link-login" class="link user"></span></a>
 
+        <!-- ADMIN MENU LINKS -->
+
+        <a href="#"><span id="link-design" class="link admin"></span></a>
+        <a href="#"><span id="link-upgrade" class="link admin"></span></a>
+        <a href="#"><span id="link-community" class="link admin"></span></a>
+        <a href="#"><span id="link-account" class="link admin"></span></a>
+        <a href="#"><span id="link-help" class="link admin"></span></a>
+        <a href="#"><span id="link-logout" class="link admin"></span></a>
+
 	</div>
     <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
     <script src="js/pulsate.min.js"></script>
     <script>
 
-        var user = "user";
+        var userInterface = "user";
 
-        function changePulsate(){
-            if (user == "user") {
+        function updatePulsateToPulsateForEitherUserOrAdminUi(){
+            if (userInterface == "user") {
                 $('.admin').pulsate('destroy');
                 $('.user').pulsate({
                      pause:1000
                 });
 
-            } else if (user == "admin") {
+            } else if (userInterface == "admin") {
                 $('.user').pulsate('destroy');
                 $('.admin').pulsate({
                      pause:1000
@@ -68,84 +77,101 @@
             }
         }
 
-        changePulsate();
+        updatePulsateToPulsateForEitherUserOrAdminUi();
 
 
 
     	$('#link-bio').click(function(){
     		$('.screen').fadeOut(1,function(){
     			$('#bio').fadeIn(1);
-                user = "user";
-                changePulsate();
+                userInterface = "user";
+                updatePulsateToPulsateForEitherUserOrAdminUi();
     		});
 
     	});
     	$('#link-news').click(function(){
     		$('.screen').fadeOut(1,function(){
     			$('#news').fadeIn(1);
-                user = "user";
+                userInterface = "user";
+                updatePulsateToPulsateForEitherUserOrAdminUi();
     		});
 
     	});
     	$('#link-shows').click(function(){
     		$('.screen').fadeOut(1,function(){
     			$('#shows').fadeIn(1);
-                user = "user";
+                userInterface = "user";
+                updatePulsateToPulsateForEitherUserOrAdminUi();
     		});
 
     	});
     	$('#link-music').click(function(){
     		$('.screen').fadeOut(1,function(){
     			$('#music').fadeIn(1);
-                user = "user";
+                userInterface = "user";
+                updatePulsateToPulsateForEitherUserOrAdminUi();
     		});
 
     	});
     	$('#link-photos, #link-lightbox-close').click(function(){
     		$('.screen').fadeOut(1,function(){
     			$('#photos').fadeIn(1);
-                user = "user";
+                userInterface = "user";
+                updatePulsateToPulsateForEitherUserOrAdminUi();
     		});
     	});
         $('#link-lightbox').click(function(){
             $('.screen').fadeOut(1,function(){
                 $('#lightbox').fadeIn(1);
-                user = "user";
+                userInterface = "user";
+                updatePulsateToPulsateForEitherUserOrAdminUi();
             });
         });
     	$('#link-store').click(function(){
     		$('.screen').fadeOut(1,function(){
     			$('#store').fadeIn(1);
-                user = "user";
+                userInterface = "user";
+                updatePulsateToPulsateForEitherUserOrAdminUi();
     		});
 
     	});
     	$('#link-contact').click(function(){
     		$('.screen').fadeOut(1,function(){
     			$('#contact').fadeIn(1);
-                user = "user";
+                userInterface = "user";
+                updatePulsateToPulsateForEitherUserOrAdminUi();
     		});
 
     	});
     	$('#link-login').click(function(){
     		$('.screen').fadeOut(1,function(){
     			$('#logged-in').fadeIn(1);
-                user = "admin";
-                changePulsate();
+                userInterface = "admin";
+                updatePulsateToPulsateForEitherUserOrAdminUi();
     		});
     	});
         $('#link-send').click(function(){
             $('.screen').fadeOut(1,function(){
                 $('#contact-send').fadeIn(1);
-                user = "user";
+                userInterface = "user";
+                updatePulsateToPulsateForEitherUserOrAdminUi();
             });
         });
         $('#link-lightbox').click(function(){
             $('.screen').fadeOut(1,function(){
                 $('#lightbox').fadeIn(1);
-                user = "user";
+                userInterface = "user";
+                updatePulsateToPulsateForEitherUserOrAdminUi();
             });
         });
+        $('#link-design').click(function(){
+            $('.screen').fadeOut(1,function(){
+                $('#design').fadeIn(1);
+                userInterface = "admin";
+                updatePulsateToPulsateForEitherUserOrAdminUi();
+            });
+        });
+
 
 
 
