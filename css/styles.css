@@ -86,6 +86,13 @@
   width:100%;
   display: none;
 }
+#admin-bio {
+  background:url(../images/11-admin-edit-bio.jpg) no-repeat;
+  height:100%;
+  width:100%;
+  display: none;
+}
+
 
 
 
@@ -156,10 +163,6 @@
   top: 130px;
   left: 770px;
 }
-#link-lightbox-close {
-  height: 100%;
-  width: 100%;
-}
 #link-login {
   height: 45px;
   width: 60px;
@@ -167,8 +170,44 @@
   left: 40px;
 }
 
+#link-admin-bio {
+    height: 80px;
+    width: 370px;
+    top: 160px;
+    left: 840px;
+}
+/*#link-admin-services {
+    height: 80px;
+    width: 370px;
+    top: 160px;
+    left: 840px;
+}
+#link-admin-menu {
+    height: 80px;
+    width: 370px;
+    top: 160px;
+    left: 840px;
+}
+#link-admin-design {
+    height: 80px;
+    width: 370px;
+    top: 160px;
+    left: 840px;
+}
+#link-admin-promote {
+    height: 80px;
+    width: 370px;
+    top: 160px;
+    left: 840px;
+}
+#link-admin-premium {
+    height: 80px;
+    width: 370px;
+    top: 160px;
+    left: 840px;
+}
 
 
 
 
-
+*/

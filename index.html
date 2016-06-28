@@ -19,7 +19,6 @@
             <a href="#"><span id="link-lightbox" class="user link"></span></a>
         </div>
         <div id="lightbox" class="screen">
-            <a href="#"><span id="link-lightbox-close" class="user link"></span></a>
         </div>
 		<div id="store" class="screen"></div>
 		<div id="contact" class="screen">
@@ -28,7 +27,11 @@
 		<div id="contact-send" class="screen"></div>
         <div id="free" class="screen"></div>
         <div id="contact-send" class="screen"></div>
-        <div id="logged-in" class="screen"></div>
+        <div id="logged-in" class="screen">
+            <a href="#"><span id="link-admin-bio" class="link admin"></span></a>
+        </div>
+        <div id="admin-bio" class="screen"></div>
+
 
 
 
@@ -55,6 +58,8 @@
         <a href="#"><span id="link-help" class="link admin"></span></a>
         <a href="#"><span id="link-logout" class="link admin"></span></a>
 
+
+
 	</div>
     <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
     <script src="js/pulsate.min.js"></script>
@@ -74,6 +79,9 @@
                 $('.admin').pulsate({
                      pause:1000
                 });
+            } else {
+                $('.user').pulsate('destroy');
+                $('.admin').pulsate('destroy');
             }
         }
 
@@ -113,7 +121,7 @@
     		});
 
     	});
-    	$('#link-photos, #link-lightbox-close').click(function(){
+    	$('#link-photos, #lightbox').click(function(){
     		$('.screen').fadeOut(1,function(){
     			$('#photos').fadeIn(1);
                 userInterface = "user";
@@ -123,7 +131,7 @@
         $('#link-lightbox').click(function(){
             $('.screen').fadeOut(1,function(){
                 $('#lightbox').fadeIn(1);
-                userInterface = "user";
+                userInterface = "none";
                 updatePulsateToPulsateForEitherUserOrAdminUi();
             });
         });
@@ -143,7 +151,7 @@
     		});
 
     	});
-    	$('#link-login').click(function(){
+    	$('#link-login, #admin-bio').click(function(){
     		$('.screen').fadeOut(1,function(){
     			$('#logged-in').fadeIn(1);
                 userInterface = "admin";
@@ -157,16 +165,16 @@
                 updatePulsateToPulsateForEitherUserOrAdminUi();
             });
         });
-        $('#link-lightbox').click(function(){
-            $('.screen').fadeOut(1,function(){
-                $('#lightbox').fadeIn(1);
-                userInterface = "user";
-                updatePulsateToPulsateForEitherUserOrAdminUi();
-            });
-        });
         $('#link-design').click(function(){
             $('.screen').fadeOut(1,function(){
                 $('#design').fadeIn(1);
+                userInterface = "admin";
+                updatePulsateToPulsateForEitherUserOrAdminUi();
+            });
+        });
+        $('#link-admin-bio').click(function(){
+            $('.screen').fadeOut(1,function(){
+                $('#admin-bio').fadeIn(1);
                 userInterface = "admin";
                 updatePulsateToPulsateForEitherUserOrAdminUi();
             });
